@@ -20,17 +20,17 @@
   list-style: none;
 }
 
-.header__link_active {
-  text-decoration: none;
-}
-
 .header__link {
-  padding-left: 3px;
+  padding-left: 1px;
   letter-spacing: 0.009em;
   text-decoration: none;
   border-bottom: 1px solid black;
 }
 
+.header__link_active {
+  text-decoration: none;
+  border-bottom: 0;
+}
 
 .header__logo {
   display: block;
@@ -49,15 +49,14 @@
   letter-spacing: 0.009em;
 }
 
-.link-adress__header {
+.link-adress {
   text-decoration: none;
   border-bottom: 1px solid #000;
 }
 
 .cover {
-  display: block;
-  height: 757px;
-  padding-right: 5px;
+  min-height: 757px;
+  padding: 165px 54px 0;
   background-image: url(../images/cover.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -77,82 +76,80 @@
 }
 
 .cover__title {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  position: relative;
+  z-index: 1;
   color: #fff;
   text-transform: uppercase;
   font-size: 100px;
-  font-weight: 700;
+  font-weight: 700; 
   line-height: 115px;
 }
 
-.cover-position-line-one {
-  position: absolute;
-  top: 163px;
-  left: 50px;
-  letter-spacing: 0.3em;
+.aligned-text {
+  display: block;
 }
 
-.cover-position-line-one-letter-spacing {
-  left: 156px;
-  letter-spacing: 0.6em;
+.aligned-text_center {
+  display: block;
+  text-align: center;
+  letter-spacing: 3px;
 }
 
-.cover-position-line-two {
-  position: absolute;
-  top: 291px;
-  left: 336px;
-  letter-spacing: 0.3em;
+.aligned-text_right {
+  display: block;
+  text-align: right;
+  letter-spacing: 2px;
+  line-height: 1;
 }
 
-.cover-position-line-two-letter-spacing {
-  left: 644px;
-  letter-spacing: 0.6em;
+.letter-spacing-extended {
+  letter-spacing: 58px;
 }
 
-.cover-position-line-three {
-  position: absolute;
-  top: 412px;
-  left: 633px;
-  letter-spacing: 0.6em;
+.letter-spacing-extended-last {
+  letter-spacing: 40px;
 }
 
-.cover-position-line-three-letter-spacing {
-  left: 865px;
-  letter-spacing: 0.3em;
+.no-letter-spacing {
+  letter-spacing: normal;
 }
 
 .cover__description {
   display: flex;
-  position: absolute;
+  justify-content: center;
+  flex-wrap: nowrap;
   align-items: center;
-  top: 657px;
-  left: 77px;
+  position: relative;
+  z-index: 1;
+  margin-top: 137px;
   font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #fff;
+  color: white;
 }
 
 .cover__description-text {
   word-spacing: 21px;
-  padding-right: 23px;
+  margin-left: 24px;
 }
 
-.cover__description-text-two {
+.cover__description-text-center {
   word-spacing: 18px;
-  padding-right: 79px;
+  margin: 0 76px 0 24px;
 }
 
 .bet-button {
   background-color: transparent;
-  outline: 1px solid #fff;
+  outline: 1px solid white;
   color: #fff;
   text-transform: uppercase;
   padding: 9px 30px;
-  font-family: Raleway;
   font-size: 22px;
   font-weight: 500;
   line-height: 25.83px;
-  margin: 0 auto;
 }
 
 
@@ -175,19 +172,22 @@
   max-width: 334px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .card-link {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   text-decoration: none;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
 }
 
 .card_type {
@@ -200,8 +200,6 @@
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .card__title {
@@ -227,18 +225,12 @@
   display: flex;
   flex-direction: column;
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_picture {
   display: flex;
   flex-direction: column;
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 
@@ -323,7 +315,6 @@
 }
 
 .footer__menu-list-item {
-font-family: Raleway;
 font-size: 18px;
 font-weight: 400;
 line-height: 21.13px;
